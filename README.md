@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，React 默认使用 Astryx，Vue 默认使用 shadcn-vue，各项目通过选定体系的主题和统一组件层落实全站 UI/UX 一致性，并实测页面性能。补充适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。用户当次明确要求优先，项目约定与统一目标冲突时按 SKILL.md 明确目标体系。
+个人跨项目偏好 skill，新项目或明确重新选型时 React 默认使用 Astryx、Vue 默认使用 shadcn-vue，已有项目局部任务沿用已确认体系。通过主题和统一组件层落实 UI/UX 一致性，性能测量按任务与改动影响触发。补充适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。用户当次明确要求优先，项目约定与统一目标冲突时按 SKILL.md 明确目标体系。
 
 ## 安装与调用
 
@@ -17,7 +17,7 @@
 git clone https://github.com/Avlonjune7/me.git ~/.agents/skills/me
 ```
 
-Claude Code 使用相同命令并将目标替换为 `~/.claude/skills/me`。技能可按 UI 设计与组件选型、浏览器排查与验收、新项目初始化、项目规范整理或开发工具安装任务自动匹配；安装后若未出现，重新开启会话。避免在同一工具的扫描范围安装多个同名副本。
+Claude Code 使用相同命令并将目标替换为 `~/.claude/skills/me`。组件体系选型、迁移、个人 UI 偏好或工具安装与项目约定需要明确时，按需使用本技能；安装后若未出现，重新开启会话。避免在同一工具的扫描范围安装多个同名副本。
 
 ## 结构与读取
 
