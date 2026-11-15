@@ -67,7 +67,7 @@ Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好
 
 ## 更新与维护
 
-仅在明确更新技能时同步本地副本，正常任务不联网检查版本。克隆安装可在确认工作区无未提交修改后执行 `git pull --ff-only`；复制安装则同步完整技能目录。
+仅在明确更新技能时同步本地副本，正常任务不联网检查版本。克隆安装可在确认工作区无未提交修改后执行 `git pull --ff-only`；复制安装则同步完整技能目录。更新 me 时同时同步 GitHub、本机全局 `C:/Users/Tars/.agents/skills/me/` 和 CC Switch 存储 `D:/DATA/cc switch/skills/me/`，核对文件一致性。CC Switch 存储路径以实际配置为准。
 
 项目代理说明可以引用技能入口，项目 DESIGN.md 继续维护项目自身决定。旧 `~/.codex/design/` 副本和已删除的 DESIGN 文档路径不自动迁移，旧项目引用应单独更新到 SKILL.md。
 

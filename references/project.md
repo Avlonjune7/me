@@ -1,5 +1,7 @@
 # 项目约定
 
+- 更新 me 时同步 GitHub、本机全局目录和 CC Switch 技能存储（本机为 `D:/DATA/cc switch/skills/me/`），核对文件一致性；CC Switch 路径以实际配置为准。
+
 - 个人 Codex 技能默认安装到用户级全局目录 `~/.agents/skills/`（本机为 `C:/Users/Tars/.agents/skills/`），安装或更新时复用该目录；用户明确要求项目级安装时再使用项目目录。同名技能保持单一安装位置。
 - Windows 下额外安装 CLI、开发工具和工具链优先使用 WinGet，支持自选目录时放到 `D:\code\cli\<工具名>`。项目依赖跟随项目，固定路径遵循工具约定，已有安装按用户要求迁移。
 - 查文档优先已有专用 CLI 或 Context7。
