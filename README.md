@@ -48,7 +48,7 @@ README 与 CHANGELOG 供安装和维护时读取，版本统一记录在 CHANGEL
 | React 复杂组件设计与重构 | vercel-composition-patterns | 沿用项目组件 API，结合项目 React 版本与官方资料 |
 | React / Next.js 性能 | vercel-react-best-practices | 用项目测量工具定位瓶颈并查对应官方资料 |
 | 网页专项审查 | web-design-guidelines | 依据项目规范和适用的 Web 标准检查，说明审查依据与覆盖缺口 |
-| 组件选型、视觉设计、现代 Web 实现 | Astryx、shadcn-vue CLI、Oil UI Pro、Modern Web Guidance | 复用项目组件和设计规范，按问题查官方资料 |
+| 统一视觉基准、设计判断与现代 Web 实现 | Astryx、Oil UI Pro、Modern Web Guidance | 结合项目技术栈落实适用的 Astryx 视觉原则，按问题查官方资料 |
 | 浏览器验证 | Playwright CLI、BrowserSkill | 使用可用且满足登录态和验证目标的工具，报告未验证部分 |
 
 这些能力按任务使用，安装按用户要求或项目依赖执行。Vercel 技能可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装。web-design-guidelines 的审查流程要求获取最新远程规则，访问失败时需说明覆盖限制。
