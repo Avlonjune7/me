@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，以 Astryx 统一项目 UI/UX、视觉一致性和页面性能，保留适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。项目约定优先，不重复 agent 的通用工作要求。
+个人跨项目偏好 skill，以 Astryx 统一项目 UI/UX，优化全站视觉一致性，并通过测量改善页面性能。补充适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。项目约定优先，不重复 agent 的通用工作要求。
 
 ## 安装与调用
 
@@ -28,16 +28,14 @@ me/
 │   ├── project.md
 │   ├── cli-efficiency.md
 │   ├── components.md
-│   ├── visual-ux.md
 │   ├── web-review.md
 │   ├── verification.md
-│   ├── inspiration.md
 │   └── performance.md
 ├── README.md
 └── CHANGELOG.md
 ```
 
-[SKILL.md](SKILL.md) 提供核心流程及触发条件，详细规则按任务读取：[项目开发](references/project.md)、[组件与设计系统](references/components.md)、[视觉与体验](references/visual-ux.md)、[验证与交付](references/verification.md)、[设计参考](references/inspiration.md)、[性能](references/performance.md)、[网页审查](references/web-review.md)。明确微调无需加载所有参考。
+[SKILL.md](SKILL.md) 提供核心流程及触发条件，详细规则按任务读取：[项目开发](references/project.md)、[组件与设计系统](references/components.md)、[验证与交付](references/verification.md)、[性能](references/performance.md)、[网页审查](references/web-review.md)。明确微调无需加载所有参考。
 
 README 与 CHANGELOG 供安装和维护时读取，版本统一记录在 CHANGELOG。运行入口及场景路由保留在 SKILL.md。
 
@@ -53,11 +51,11 @@ README 与 CHANGELOG 供安装和维护时读取，版本统一记录在 CHANGEL
 
 这些能力按任务使用，安装按用户要求或项目依赖执行。Vercel 技能可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装。web-design-guidelines 的审查流程要求获取最新远程规则，访问失败时需说明覆盖限制。
 
-Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好](references/cli-efficiency.md)。全局代理说明文件保留语言、原生环境、效率要求及按需技能入口，me 补充具体个人偏好。本机安装位于 `C:/Users/Tars/.agents/skills/me/`，同步时复用该目录。
+Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好](references/cli-efficiency.md)。全局代理说明文件保留语言、原生环境、效率要求及按需技能入口，me 补充具体个人偏好。安装与同步位置见[项目约定](references/project.md)。
 
 ## 编写原则
 
-只保留会改变执行选择的个人偏好与项目约定；Codex、Claude Code 等 agent 已有的通用步骤不在技能中重复展开。影响实际行为的例外仍需明确，例如居中弹窗、组件选型、环境复用及验证范围。此原则不意味着各 agent 的默认行为完全一致。
+只保留会改变执行选择的个人偏好与项目约定；Codex、Claude Code 等 agent 已有的通用步骤不在技能中重复展开。影响实际行为的例外仍需明确，例如 Astryx 视觉基准、技术栈边界、环境复用及验证范围。此原则不意味着各 agent 的默认行为完全一致。
 
 ## 使用边界
 
@@ -67,7 +65,7 @@ Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好
 
 ## 更新与维护
 
-仅在明确更新技能时同步本地副本，正常任务不联网检查版本。克隆安装可在确认工作区无未提交修改后执行 `git pull --ff-only`；复制安装则同步完整技能目录。更新 me 时同时同步 GitHub、本机全局 `C:/Users/Tars/.agents/skills/me/` 和 CC Switch 存储 `D:/DATA/cc switch/skills/me/`，核对文件一致性。CC Switch 存储路径以实际配置为准。
+仅在明确更新技能时同步本地副本，正常任务不联网检查版本。克隆安装可在确认工作区无未提交修改后执行 `git pull --ff-only`；复制安装则同步完整技能目录。更新目标及一致性核对要求统一见[项目约定](references/project.md)。
 
 项目代理说明可以引用技能入口，项目 DESIGN.md 继续维护项目自身决定。旧 `~/.codex/design/` 副本和已删除的 DESIGN 文档路径不自动迁移，旧项目引用应单独更新到 SKILL.md。
 
