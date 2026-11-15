@@ -1,13 +1,3 @@
 # 设计参考
 
-| 来源 | 用途 |
-| --- | --- |
-| [Siteinspire](https://www.siteinspire.com/) | 整体风格、布局、留白、图文比例 |
-| [Lapa Ninja](https://www.lapa.ninja/) | 首页、营销页、产品介绍页 |
-| [Mobbin](https://mobbin.com/explore/web) | 产品界面、后台、表格、操作流程 |
-| [Landingfolio](https://www.landingfolio.com/components) | 首屏、套餐、导航、局部组件 |
-| [Happy Hues](https://www.happyhues.co/) | 配色与颜色用途 |
-
-- 仅方向未定或明确要求探索时查少量案例，查看实际页面或截图；已有设计够用时不搜索，无法访问时换可访问来源。
-- 已有与当前问题匹配的页面或截图时优先复用，需要当前页面状态时再访问来源。
-
+仅在用户明确要求外部案例时查阅，优先复用适用的已有页面或截图。参考用于解决具体的布局与流程问题，视觉实现沿用 Astryx 基准及项目明确约定。
