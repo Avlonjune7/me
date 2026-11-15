@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，以 Astryx 统一项目 UI/UX，优化全站视觉一致性，并通过测量改善页面性能。补充适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。项目约定优先，不重复 agent 的通用工作要求。
+个人跨项目偏好 skill，React 默认使用 Astryx，Vue 默认使用 shadcn-vue，以 Astryx 设计语言统一视觉，通过统一组件层落实 UI/UX，并实测页面性能。补充适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。项目约定优先，不重复 agent 的通用工作要求。
 
 ## 安装与调用
 
@@ -46,7 +46,7 @@ README 与 CHANGELOG 供安装和维护时读取，版本统一记录在 CHANGEL
 | React 复杂组件设计与重构 | vercel-composition-patterns | 沿用项目组件 API，结合项目 React 版本与官方资料 |
 | React / Next.js 性能 | vercel-react-best-practices | 用项目测量工具定位瓶颈并查对应官方资料 |
 | 网页专项审查 | web-design-guidelines | 依据项目规范和适用的 Web 标准检查，说明审查依据与覆盖缺口 |
-| 统一视觉基准与现代 Web 实现 | Astryx、Modern Web Guidance | 结合项目技术栈落实适用的 Astryx 视觉原则，按问题查官方资料 |
+| 组件体系、统一视觉与现代 Web 实现 | Astryx、shadcn-vue、Modern Web Guidance | 按项目目标体系查询官方资料，继续遵循统一组件层与复用约束 |
 | 浏览器验证 | Playwright CLI、BrowserSkill | 使用可用且满足登录态和验证目标的工具，报告未验证部分 |
 
 这些能力按任务使用，安装按用户要求或项目依赖执行。Vercel 技能可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装。web-design-guidelines 的审查流程要求获取最新远程规则，访问失败时需说明覆盖限制。
