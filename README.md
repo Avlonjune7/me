@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，React 默认使用 Astryx，Vue 默认使用 shadcn-vue，以 Astryx 设计语言统一视觉，通过统一组件层落实 UI/UX，并实测页面性能。补充适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。项目约定优先，不重复 agent 的通用工作要求。
+个人跨项目偏好 skill，React 默认使用 Astryx，Vue 默认使用 shadcn-vue，各项目通过选定体系的主题和统一组件层落实全站 UI/UX 一致性，并实测页面性能。补充适用的工具与安装偏好，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。用户当次明确要求优先，项目约定与统一目标冲突时按 SKILL.md 明确目标体系。
 
 ## 安装与调用
 
@@ -55,7 +55,7 @@ Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好
 
 ## 编写原则
 
-只保留会改变执行选择的个人偏好与项目约定；Codex、Claude Code 等 agent 已有的通用步骤不在技能中重复展开。影响实际行为的例外仍需明确，例如 Astryx 视觉基准、技术栈边界、环境复用及验证范围。此原则不意味着各 agent 的默认行为完全一致。
+只保留会改变执行选择的个人偏好与项目约定；Codex、Claude Code 等 agent 已有的通用步骤不在技能中重复展开。影响实际行为的例外仍需明确，例如默认组件体系、技术栈边界、环境复用及验证范围。此原则不意味着各 agent 的默认行为完全一致。
 
 ## 使用边界
 
