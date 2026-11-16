@@ -19,7 +19,7 @@ description: "在项目初始化、环境与工具配置、接口或数据库兼
 | 维护、同步或校验 me | [维护说明](README.md#更新与维护) |
 | 工具安装、Windows 入口故障、Go 构建部署或大量输出处理 | [CLI 偏好](references/cli-efficiency.md) |
 | 项目初始化、环境启动与恢复、接口与数据兼容性、文档与进度约定 | [项目约定](references/project.md) |
-| UI/UX 统一、组件选型与迁移、混用治理或设计案例 | [组件与设计系统](references/components.md) |
+| UI 设计与精修、组件选型与迁移、混用治理或设计案例 | [组件与设计系统](references/components.md) |
 | 页面加载、请求、资源或渲染性能 | [页面性能](references/performance.md) |
 | 浏览器排查、页面验收或 UI 验证范围选择 | [验证偏好](references/verification.md) |
 | 用户要求网页专项审查，或 UI 出现质量疑点 | [网页审查](references/web-review.md) |
