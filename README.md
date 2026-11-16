@@ -71,6 +71,8 @@ me/
 │   ├── web-review.md
 │   ├── verification.md
 │   └── performance.md
+├── scripts/check.py
+├── evals/cases.md
 ├── README.md
 └── CHANGELOG.md
 ```
@@ -91,7 +93,7 @@ me/
 
 这些能力按任务使用，安装按用户要求或项目依赖执行。Vercel 技能可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装。web-design-guidelines 的审查流程要求获取最新远程规则，访问失败时需说明覆盖限制。
 
-Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好](references/cli-efficiency.md)。全局代理说明文件保留语言、原生环境、效率要求及按需技能入口，me 补充具体个人偏好。安装与同步位置见[项目约定](references/project.md)。
+Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好](references/cli-efficiency.md)。全局代理说明文件保留语言、原生环境、效率要求及按需技能入口，me 补充具体个人偏好。安装与同步要求见[更新与维护](#更新与维护)。
 
 ## 编写原则
 
@@ -105,10 +107,28 @@ Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好
 
 ## 更新与维护
 
-仅在明确更新技能时同步本地副本，正常任务不联网检查版本。克隆安装可在确认工作区无未提交修改后执行 `git pull --ff-only`；复制安装则同步完整技能目录。更新目标及一致性核对要求统一见[项目约定](references/project.md)。
+仅在明确更新技能时同步本地副本，正常任务不联网检查版本。克隆安装可在确认工作区无未提交修改后执行 `git pull --ff-only`；复制安装则同步完整技能目录。更新时同步 GitHub、本机安装目录和 CC Switch 的实际技能存储，先比较现有修改并备份，再同步和核对。路径从安装与应用配置确定。个人 Codex 默认使用 `~/.agents/skills/me/`，项目级安装按用户明确要求执行。
 
 项目代理说明引用技能入口，项目专属决定保存在项目文档中。
 
 仅纳入经过验证的跨项目经验；项目特例留在项目中。维护技能时更新相关参考与 CHANGELOG，说明原因、范围及实际同步状态，不在执行文档中重复版本和维护记录。
 
 版本约定：文字澄清递增补丁版本，兼容性新增递增次版本，改变既有规则含义或适用边界递增主版本。
+
+### 只读校验
+
+使用现有 Python 3.10+ 运行 [check.py](scripts/check.py)，仅在维护时执行。脚本检查本仓库使用的单行 name/description frontmatter 格式、本地 Markdown 文件引用，报告文件数及字节数。引用检查跳过代码块，不访问外部链接或验证标题锚点。字节数用于比较体量。
+
+```sh
+python scripts/check.py
+python scripts/check.py --copy /path/to/installed/me --copy /path/to/cc-switch/skills/me
+python scripts/check.py --cc-db /path/to/cc-switch.db --cc-skill-dir /path/to/cc-switch/skills/me --cc-id local:me
+```
+
+`--copy` 比较完整文件集及内容，文本比较忽略换行差异。CC Switch 检查使用实际副本的原始字节哈希，并核对简介。目录或数据库参数显式提供，脚本仅输出差异路径或检查项，不输出凭据与文件内容。
+
+远端对照先在维护任务中获取指定远端，再运行 `python scripts/check.py --git-ref origin/main`。脚本只读取本地 Git 引用并输出完整提交号，引用是否最新以本次 fetch 结果为准。成功返回 0，差异、缺失或读取失败返回非零退出码；文件、数据库及远端均保持只读。
+
+### 任务评测
+
+[评测用例](evals/cases.md) 用于观察路由、无关读取、验收和耗时。用例按需运行，实际结果另行记录，维护校验与任务评测分别报告。

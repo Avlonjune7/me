@@ -1,6 +1,6 @@
 ---
 name: me
-description: "在组件体系选型、迁移、个人 UI 偏好或工具安装与项目约定需要明确时提供指导，包含按需读取的性能与验收偏好。"
+description: "在项目初始化、环境与工具配置、接口或数据库兼容性变更、项目文档与进度约定、组件体系选型迁移及个人 UI 偏好需要明确时使用；维护或同步 me 时使用。性能与验收参考按需读取。"
 ---
 
 # me
@@ -16,8 +16,9 @@ description: "在组件体系选型、迁移、个人 UI 偏好或工具安装�
 
 | 场景 | 参考 |
 | --- | --- |
-| Windows 工具入口故障或需要压缩大量命令输出 | [CLI 偏好](references/cli-efficiency.md) |
-| 项目初始化、工具安装、环境启动与恢复、接口与数据兼容性、文档与进度约定 | [项目约定](references/project.md) |
+| 维护、同步或校验 me | [维护说明](README.md#更新与维护) |
+| 工具安装、Windows 入口故障、Go 构建部署或大量输出处理 | [CLI 偏好](references/cli-efficiency.md) |
+| 项目初始化、环境启动与恢复、接口与数据兼容性、文档与进度约定 | [项目约定](references/project.md) |
 | UI/UX 统一、组件选型与迁移、混用治理或设计案例 | [组件与设计系统](references/components.md) |
 | 页面加载、请求、资源或渲染性能 | [页面性能](references/performance.md) |
 | 浏览器排查、页面验收或 UI 验证范围选择 | [验证偏好](references/verification.md) |
