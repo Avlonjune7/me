@@ -17,7 +17,7 @@ description: "在组件体系选型、迁移、个人 UI 偏好或工具安装�
 | 场景 | 参考 |
 | --- | --- |
 | Windows 工具入口故障或需要压缩大量命令输出 | [CLI 偏好](references/cli-efficiency.md) |
-| 初始化项目、安装开发工具或整理项目规范 | [项目约定](references/project.md) |
+| 项目初始化、工具安装、环境启动与恢复、接口与数据兼容性、文档与进度约定 | [项目约定](references/project.md) |
 | UI/UX 统一、组件选型与迁移、混用治理或设计案例 | [组件与设计系统](references/components.md) |
 | 页面加载、请求、资源或渲染性能 | [页面性能](references/performance.md) |
 | 浏览器排查、页面验收或 UI 验证范围选择 | [验证偏好](references/verification.md) |
