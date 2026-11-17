@@ -91,6 +91,20 @@ def check_links(root, files):
     return errors
 
 
+SKILL_BUDGET = 4000  # bytes; SKILL.md is loaded whenever me triggers
+
+
+def check_routing(files):
+    errors = []
+    skill = files['SKILL.md'].decode('utf-8')
+    for name in sorted(files):
+        if name.startswith('references/') and name.endswith('.md') and f'({name})' not in skill:
+            errors.append(f'SKILL.md: {name} is not routed')
+    if len(files['SKILL.md']) > SKILL_BUDGET:
+        errors.append(f'SKILL.md: {len(files["SKILL.md"])} bytes exceeds budget {SKILL_BUDGET}')
+    return errors
+
+
 def git_inventory(root, ref):
     def git(*args):
         return subprocess.check_output(['git', '-C', str(root), *args], stderr=subprocess.PIPE)
@@ -124,7 +138,7 @@ def main():
         root = args.root.resolve()
         files = inventory(root)
         fields = metadata(files)
-        errors = check_links(root, files)
+        errors = check_links(root, files) + check_routing(files)
         for directory in args.copy:
             errors.extend(compare(files, inventory(directory), str(directory)))
         if args.cc_db:
