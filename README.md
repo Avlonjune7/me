@@ -1,6 +1,6 @@
 # me
 
-个人跨项目约定 skill，适用于 Codex 与 Claude Code。新项目或明确重新选型时 React 默认 Astryx、Vue 默认 shadcn-vue，已有项目沿用已确认体系。执行规则见 [SKILL.md](SKILL.md)，版本见 [CHANGELOG](CHANGELOG.md)。
+Codex 个人跨项目约定。新项目或明确重新选型时 React 默认 Astryx、Vue 默认 shadcn-vue，已有项目沿用已确认体系。执行规则见 [SKILL.md](SKILL.md)，版本见 [CHANGELOG](CHANGELOG.md)。
 
 设计目标与[全局 AGENTS.md](https://github.com/Avlonjune7/codex-global-agent/blob/main/AGENTS.md) 一致：响应快、执行快、省 token、节省上下文。全局规则常驻，me 按场景读取，项目文档承载项目自身的需求、架构与进度。
 
@@ -8,10 +8,7 @@
 
 个人使用默认用户级安装，克隆整个仓库并保留相对目录。同一工具的扫描范围内避免多个同名副本。
 
-| 工具 | 用户级目录 | 项目级目录 | 调用 |
-| --- | --- | --- | --- |
-| Codex | `~/.agents/skills/me/` | `.agents/skills/me/` | `$me ...` |
-| Claude Code | `~/.claude/skills/me/` | `.claude/skills/me/` | `/me ...` |
+用户级目录为 `~/.agents/skills/me/`，项目级目录为 `.agents/skills/me/`。需要显式调用时使用 `$me`。
 
 ```sh
 git clone https://github.com/Avlonjune7/me.git ~/.agents/skills/me
@@ -25,7 +22,7 @@ git clone https://github.com/Avlonjune7/me.git ~/.agents/skills/me
 | --- | --- |
 | 改文案、调整已有表单、修复明确的 UI 或后端问题 | 直接描述，不需要 me |
 | 新建项目、选择或迁移组件体系 | 调用 me，说明技术栈、范围和已有约束 |
-| 设计、重设计、评审、精修 | 明确说出“设计/重设计/评审”，使用 Impeccable |
+| 界面设计、重设计、视觉或交互评审 | 明确说出“设计/重设计/评审”，使用 Impeccable |
 | 页面慢、浏览器验收 | 描述复现步骤，需要个人验收偏好时调用 me |
 | 工具安装、接口兼容、项目文档 | 调用 me，说明任务范围 |
 
@@ -47,8 +44,7 @@ me/
 │   └── cli-efficiency.md     CLI 与工具安装
 ├── evals/cases.md            任务评测用例
 ├── scripts/check.py          只读维护校验
-├── CHANGELOG.md
-└── CHANGELOG-archive.md
+└── CHANGELOG.md
 ```
 
 ## 编写原则
@@ -62,7 +58,7 @@ me/
 
 仅在明确更新技能时同步，正常任务不联网检查版本。以 GitHub 为唯一来源：本机克隆安装后用 `git pull --ff-only` 更新；CC Switch 若能指向本机目录则直接指向，否则同步完整目录后用校验脚本核对。
 
-版本约定：文字澄清递增补丁版本，兼容性新增递增次版本，改变既有规则含义或适用边界递增主版本。CHANGELOG 只保留近期条目，较早记录移入 CHANGELOG-archive.md。
+版本约定：文字澄清递增补丁版本，兼容性新增递增次版本，改变既有规则含义或适用边界递增主版本。CHANGELOG 只保留近期条目，更早记录见 Git 历史。
 
 ### 只读校验
 
